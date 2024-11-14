@@ -1,0 +1,297 @@
+@import url("fonts.scss");
+body {
+  width: calc(100vw - 20px);
+  height: 100vh;
+  font-family: UniNeue, sans-serif;
+  margin: 0;
+  font-size: 1vw;
+  padding: 1vw 0;
+}
+body a {
+  text-decoration: none;
+  color: inherit;
+}
+body header,
+body main {
+  margin: 0 auto;
+  width: fit-content;
+  min-width: 80vw;
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+.relative {
+  position: relative;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.number:before {
+  background-image: url("../imgs/phone.svg");
+  background-size: contain;
+  margin-right: 0.5vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: block;
+  height: 2vw;
+  width: 1vw;
+  content: "";
+}
+
+.max-w-15 {
+  max-width: 15vw;
+}
+
+.max-w-10 {
+  max-width: 10vw;
+}
+
+.absolute {
+  position: absolute;
+}
+.absolute.center {
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.img-bgc {
+  position: absolute;
+  z-index: -3;
+  top: 0;
+  width: calc(100vw - 20px);
+  height: 60vw;
+  background-position: center;
+  background-size: 120% 100%;
+  background-repeat: no-repeat;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+header {
+  height: fit-content;
+}
+header nav a {
+  text-transform: uppercase;
+}
+header #logo {
+  height: 5vw;
+}
+header #mapOpen {
+  height: 3vw;
+  border-radius: 2vw;
+}
+header .btn {
+  background: #313D4B;
+  color: #FFFFFF;
+}
+
+.grid {
+  display: grid;
+}
+.grid.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid.gap2 {
+  gap: 2vw;
+}
+.grid.gap1 {
+  gap: 1vw;
+}
+
+.flex {
+  display: flex;
+}
+.flex.js-sb {
+  justify-content: space-between;
+}
+.flex.js-sa {
+  justify-content: space-around;
+}
+.flex.flex-column {
+  flex-direction: column;
+}
+.flex.gap2 {
+  gap: 2vw;
+}
+.flex.gap1 {
+  gap: 1vw;
+}
+.flex.gap4 {
+  gap: 4vw;
+}
+.flex.center {
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  border: none;
+  position: relative;
+  height: auto;
+  margin: auto 0;
+  display: flex;
+  width: max-content;
+  overflow-x: hidden;
+}
+.btn.p1 {
+  padding: 1vw;
+}
+.btn.p2 {
+  padding: 2vw;
+}
+.btn.border-05 {
+  border-radius: 0.5vw;
+}
+.btn.c-white {
+  color: #FFFFFF;
+}
+.btn.bgc-52BC5B {
+  background-color: #52BC5B;
+}
+.btn .flare {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 45px;
+  transform: skewX(-45deg);
+  left: -150%;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.4));
+  animation: flareAnimation 3s infinite linear;
+}
+
+.social img {
+  padding: 0.6vw;
+  width: auto;
+  height: 1.3vw;
+  border-radius: 2vw;
+}
+.social #tg {
+  background: #00A2F2;
+}
+.social #viber {
+  background: #7460F3;
+}
+.social #wp {
+  background: #25D266;
+}
+
+.bgc-white {
+  background-color: white;
+}
+
+.info article::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: -0.1vw;
+  transform: rotate(-45deg);
+  left: -1vw;
+  width: 1.2vw;
+  height: 0.2vw;
+  background-color: red;
+}
+.info p {
+  max-width: 10vw;
+  padding: 0;
+  margin: 0;
+  font-size: 1.2em;
+}
+.info .fz-3 {
+  font-size: 3em;
+}
+
+main {
+  height: fit-content;
+  width: fit-content;
+}
+main h1 {
+  width: 45vw;
+  font-size: 3.8em;
+}
+main .btn {
+  text-transform: uppercase;
+  word-wrap: break-word;
+  border-radius: 0.5vw;
+  padding: 1vw 2vw;
+}
+main .btn p {
+  text-align: left;
+}
+main .btn img {
+  height: 2vw;
+}
+main .slider {
+  padding-top: 1vw;
+  width: auto;
+}
+main .slider article img {
+  height: 2vw;
+  width: 1vw;
+}
+main .slider article article img {
+  height: 10vw;
+  width: 8vw;
+}
+
+.pop-up-map {
+  opacity: 0;
+  z-index: -3;
+}
+.pop-up-map iframe {
+  margin: auto;
+}
+.pop-up-map article {
+  z-index: -3;
+}
+.pop-up-map.active {
+  opacity: 1;
+  z-index: 1;
+  transition: 0.3s;
+}
+.pop-up-map.active iframe {
+  animation-name: OpenMenu;
+  animation-duration: 2s;
+  animation-direction: normal;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.pop-up-map.active article {
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+}
+
+.button-animation {
+  overflow: hidden;
+}
+
+
+
+
+@keyframes OpenMenu {
+  from {
+    width: 10vw;
+    height: 10vh;
+  }
+  to {
+    width: 80vw;
+    height: 80vh;
+  }
+}
+@keyframes flareAnimation {
+  0% {
+    left: -10%;
+  }
+  100% {
+    left: 150%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Deneika</title>
+    <link rel="shortcut icon" href="assets/imgs/Favicon.png">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+</head>
+<body>
+<img src="assets/imgs/header_bg.png" alt="None" class="img-bgc">
+    <header class="grid gap1">
+        <section class="flex gap2 js-sb">
+            <article class="flex gap2">
+                <img src="assets/imgs/logo.png" alt="Logo" id="logo">
+                <p class="max-w-15"> <span class="bold">Профессиональный монтаж дымоходов</span> любой сложности на территории Киева и Киевской обл.</p>
+            </article>
+            <article class="flex gap2 center">
+                <article class="flex center gap1">
+                    <img src="assets/imgs/map.png" alt="map" id="mapOpen">
+                    <p class="max-w-10">Беларусь. Минск</p>
+                </article>
+                <button class="p1 btn border-05">
+                    Консультация инженера
+                </button>
+                <article>
+                    <p class="number flex center">+37 067 242-58-78</p>
+                    <article class="flex js-sb social">
+                        <img class="element_hover nav_el" src="assets/imgs/viber.svg" alt="viber" id="viber">
+                        <img class="element_hover nav_el" src="assets/imgs/telegram.svg" alt="tg" id="tg">
+                        <img class="element_hover nav_el" src="assets/imgs/whatsup.svg" alt="wp" id="wp">
+                    </article>
+                </article>
+            </article>
+        </section>
+        <nav class="flex js-sb">
+            <a class="nav_el" href="#">Калькулятор</a>
+            <a class="nav_el" href="#">Услуги</a>
+            <a class="nav_el" href="#">Наши новости</a>
+            <a class="nav_el" href="#">Отзывы</a>
+            <a class="nav_el" href="#"> Консультация</a>
+            <a class="nav_el" href="#">Преимущества</a>
+            <a class="nav_el" href="#">Производство</a>
+            <a class="nav_el" href="#">Вопрос-ответ</a>
+            <a class="nav_el" href="#">Контакты</a>
+        </nav>
+
+
+    </header>
+    <main class="">
+        <section class="grid">
+            <h1 id="oneEl">Монтаж дымоходов из нержавеющей стали для частных домов и предприятий </h1>
+            <section>
+                <article class="flex gap4 info relative">
+                    <article class="scroll_anim flex gap1 relative">
+                        <p class="fz-3">15</p>
+                        <p>лет устанавливаем дымоходы для частных лиц и организаций</p>
+                    </article>
+                    <article class="scroll_anim relative">
+                        <p>Бесплатный выезд инженера в пределах 30 км. от Киева</p>
+                    </article>
+                    <article class="scroll_anim relative">
+                        <p>Монтаж под ключ от 1 дня, в наличии все разрешительные документы</p>
+                    </article>
+                </article>
+            </section>
+            <section id="endTrigger" class="flex gap4">
+                <article class="">
+                    <p>Рассчитайте стоимость монтажа вашего <br> дымохода за 1 минуту и <span class="bgc-white bold">получите скидку 15%</span></p>
+                    <button class="btn c-white flex center gap1 bgc-52BC5B c-white">
+                        <img src="assets/imgs/btn_document.png" alt="img">
+                        <p class="c-white bold upper-case button-animation">Рассчитать стоимость <br> монтажа и получить скидку <span class="flare"></span></p>
+                    </button>
+                </article>
+                <article class="flex flex-column center slider">
+                    <p>Лицензии и сертификаты в наличии</p>
+                    <article class="flex center">
+                        <img src="assets/imgs/arrow_back.png" alt="Back">
+                        <article class="flex js-sb">
+                            <img src="assets/imgs/document.png" alt="document">
+                            <img src="assets/imgs/document.png" alt="document">
+                            <img src="assets/imgs/document.png" alt="document">
+                        </article>
+                        <img src="assets/imgs/arrow_next.png" alt="Next">
+                    </article>
+                </article>
+            </section>
+        </section>
+
+        <section class="pop-up-map absolute center flex">
+            <article onclick="closeBlock('map')" class="absolute full-screen"></article>
+            <iframe src="https://yandex.ru/map-widget/v1/-/CBucU6V~8B"></iframe>
+        </section>
+        <section class="pop-up-document"></section>
+    </main>
+    <script src="assets/scripts/index.js"></script>
+    <script src="assets/scripts/gsapjs.js"></script>
+</body>
+</html>
